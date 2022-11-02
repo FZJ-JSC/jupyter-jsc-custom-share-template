@@ -11,6 +11,9 @@
 {%- macro ampel(system, href) -%}
 <div id="ampel-{{system}}" class="pb-4 text-center">
   <img class="ampel-img" src='{{static_url( "images/footer/systems/" + system.lower() + ".svg?v=" + random_int(10) )}}' />
+  
+  {#- Uncomment the line below if testing locally -#}
+  {# {%- set incident_messages = {} %} #}
   <a href="{{href}}" target="_blank" class="align-middle" data-toggle="ample-tooltip"
     title='{{incident_messages.get(system, "")}}'>
     {%- if system == "JUPYTER" -%}
