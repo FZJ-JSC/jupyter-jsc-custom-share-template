@@ -17,8 +17,10 @@ If you want to modify a file which is not present in this template repository, f
 
 
 ## How to test custom files
-You can and should test any changes. In your [JupyterHub config file](https://jupyterhub.readthedocs.io/en/stable/getting-started/config-basics.html), you can specify template and data paths.  
-Some templates may expect additional parameters which are also set in the configuration file. For more information about template variables, refer to the [README](https://github.com/FZJ-JSC/jupyter-jsc-custom-share-template/blob/templates/README.md) in the `templates` branch.
+You can and should test any changes. In your [JupyterHub config file](https://jupyterhub.readthedocs.io/en/stable/getting-started/config-basics.html), you can specify template and data paths. Some templates expect additional parameters which are also set in the configuration file. 
+
+**HOWEVER**, some variables are created and passed to the templates by the custom JupyterHub Jupyter-JSC uses. Because of this, some templates will still not render correctly even with the configuration file below. For more information about template variables, refer to the [README](https://github.com/FZJ-JSC/jupyter-jsc-custom-share-template/blob/templates/README.md) in the `templates` branch.
+
 
 
 ```python
