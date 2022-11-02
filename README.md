@@ -1,6 +1,9 @@
-# jupyter-jsc-eurocc-gcs
-Jupyterhub Jinja templates for EuroCC
+# jupyter-jsc-custom-share-template
+Template repository for custom JupyterHub templates and static files.
 
+To use this template, click **Use this template** above the file list and select **Include all branches** when creating your repository.
+
+Reference templates and static files used by the Jupyter-JSC JupyterHub can be found [in this repository](https://github.com/FZJ-JSC/jupyter-jsc-share).
 ## Static
 
 This branch contains any static files that should be changed.
