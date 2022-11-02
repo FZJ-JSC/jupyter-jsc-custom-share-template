@@ -17,12 +17,26 @@ If you want to modify a file which is not present in this template repository, f
 
 
 ## How to test custom files
-You can and should test any changes. In your [JupyterHub config file](https://jupyterhub.readthedocs.io/en/stable/getting-started/config-basics.html), you can specify template and data paths:
+You can and should test any changes. In your [JupyterHub config file](https://jupyterhub.readthedocs.io/en/stable/getting-started/config-basics.html), you can specify template and data paths.  
+Some templates may expect additional parameters which are also set in the configuration file. For more information about template variables, refer to the [README](https://github.com/FZJ-JSC/jupyter-jsc-custom-share-template/blob/templates/README.md) in the `templates` branch.
+
+
 ```python
 # jupyterhub_config.py
 
-c.JupyterHub.template_paths = ["path/to/template/files"]  # list
-c.JupyterHub.data_files_path = "path/to/static/files"  # string
+c.JupyterHub.template_paths = ["<path/to/template/files>"]  # list
+c.JupyterHub.data_files_path = "<path/to/static/files>"  # string
+
+# Additional template variables expected by some templates
+c.JupyterHub.template_vars = {
+    "spawn_progress_update_url": "users/progress/update",
+    "user_cancel_message": "Start cancelled by user.</summary>You clicked the cancel button.</details>",
+    "hostname": "<your.hostname>",  # e.g. jupyter-jsc.fz-juelich.de 
+    # JupyterJSC templates use `extends` and `includes` statements with a modified path,
+    # e.g. {% extends template_path + "/page.html" %} instead of {% extends "page.html" %}
+    "template_path": "."  # can probably use local directory instead of a path for local JupyterHubs
+}
+
 ```
 
 Then, start a local JupyterHub using the config file: `jupyterhub -f /path/to/jupyterhub_config.py`
