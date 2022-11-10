@@ -1,7 +1,10 @@
 # jupyter-jsc-custom-share-template
 Template repository for custom JupyterHub templates and static files.
 
-To use this template, click **Use this template** above the file list and select **Include all branches** when creating your repository.
+To use this template, click **Use this template** above the file list 
+![template](img/template.png)
+and select **Include all branches** when creating your repository.
+![all_branches](img/all_branches.png)
 
 Reference templates and static files used by the Jupyter-JSC JupyterHub can be found [in this repository](https://github.com/FZJ-JSC/jupyter-jsc-share).
 
