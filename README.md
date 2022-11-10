@@ -40,9 +40,13 @@ expanded_scopes
 ```
 
 ## Why won't my template render correctly?
-Jupyter-JSC uses a custom JupyterHub installation which passes some variables your local installation is unlikely to have. This should affect only the templates `home.html`, `spawn_pending.html` and `footer.html`.
+Jupyter-JSC uses a custom JupyterHub installation which passes some variables your local installation is unlikely to have. Most importantly, the line 
+```
+ns.update(dict(get_template=self.get_template))
+```
+is added to the [`template_namespace`](https://github.com/jupyterhub/jupyterhub/blob/main/jupyterhub/handlers/base.py#L1273), so that template paths can be determined per JupyterHub installation. You can either patch your JupyterHub to include this line as well or replace any `get_template("my_template").name` with the correct path for local testing instead. If you choose the latter approach, don't forget to change it back when pushing to the repository, or the paths won't get resolved correctly on our side.
 
-The custom JupyterHub variables include `incident_messages`, `custom_config`, `maintenance_list`, `spawner_options_form` and `additional_spawn_options`. 
+In addition, custom JupyterHub variables include `incident_messages`, `custom_config`, `maintenance_list`, `spawner_options_form` and `additional_spawn_options`. These variables should affect only the templates `home.html`, `spawn_pending.html` and `footer.html`.
 
 You can try to get around this by initializing these variables directly via Jinja in some templates, although this might not work in all cases. For example in `footer.html`:
 
