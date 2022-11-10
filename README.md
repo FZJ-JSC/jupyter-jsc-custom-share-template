@@ -53,3 +53,5 @@ You can try to get around this by initializing these variables directly via Jinj
 ```jinja
 {% set incident_messages = {} %}
 ```
+
+If you still run into trouble, check if you have added any necessary template variables to your JupyterHub config file, see [here](https://github.com/FZJ-JSC/jupyter-jsc-custom-share-template/tree/main#how-to-test-custom-files).
