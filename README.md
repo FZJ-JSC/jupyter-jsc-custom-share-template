@@ -7,9 +7,11 @@ Reference templates and static files used by the Jupyter-JSC JupyterHub can be f
 
 ## Templates
 
-[Official JupyterHub documentation](https://jupyterhub.readthedocs.io/en/stable/reference/templates.html)
+This branch contains any templates that should be changed on the staging JupyterHub instance. Templates are written in [Jinja](https://jinja.palletsprojects.com/en/3.1.x/). For more information, refer to the [official JupyterHub documentation](https://jupyterhub.readthedocs.io/en/stable/reference/templates.html).
 
-* Change header and footer as desired. Any logos should be placed in the (staging or production) `static` branch. 
+### Suggested changes for a custom JupyterHub
+
+* Change header and footer as desired. Any logos should be placed in the (staging) `static` branch. 
 
 * You may want to update the meta data in `page.html`.
 
