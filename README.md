@@ -11,7 +11,7 @@ This branch contains any templates that should be changed on the staging Jupyter
 
 ### Suggested changes for a custom JupyterHub
 
-* Change header and footer as desired. Any logos should be placed in the (staging) `static` branch. 
+* Change header and footer as desired. Any logos should be placed in the (production) `static` branch. 
 
 * You may want to update the meta data in `page.html`.
 
