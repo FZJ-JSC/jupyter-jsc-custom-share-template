@@ -9,7 +9,7 @@ Reference templates and static files used by the Jupyter-JSC JupyterHub can be f
 
 [Official JupyterHub documentation](https://jupyterhub.readthedocs.io/en/stable/reference/templates.html)
 
-* Change header and footer as desired. Any logos should be placed in the `static` branch. 
+* Change header and footer as desired. Any logos should be placed in the (staging or production) `static` branch. 
 
 * You may want to update the meta data in `page.html`.
 
@@ -39,7 +39,7 @@ expanded_scopes
 # and any variables defined in under `template_vars` in the JupyterHub config file
 ```
 
-## Why won't my template render correctly?
+## Why won't my template render correctly? - Testing locally
 Jupyter-JSC uses a custom JupyterHub installation which passes some variables your local installation is unlikely to have. Most importantly, the line 
 ```
 ns.update(dict(get_template=self.get_template))
