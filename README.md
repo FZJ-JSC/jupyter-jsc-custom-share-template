@@ -10,7 +10,7 @@ Reference templates and static files used by the Jupyter-JSC JupyterHub can be f
 
 ## How to create custom files
 
-Any files which are placed in the `templates` and `static` branches will be used by Jupyter-JSC instead of the [default files](https://github.com/FZJ-JSC/jupyter-jsc-share/tree/main/jupyterhub). To help you to know which files you should modify, the `templates` branch contains files which are frequently  modified for custom JupyterHub instances. The `static` branch contains frequently modified static files such as css files, custom logos, etc.
+Any files which are placed in the `templates` and `static` branches will be used by Jupyter-JSC instead of the [default files](https://github.com/FZJ-JSC/jupyter-jsc-share/tree/main/jupyterhub). To help you to know which files you should modify, the `templates` branch contains files which are frequently  modified for custom JupyterHub instances. The `static` branch contains frequently modified static files such as css files, custom logos, etc. Please keep templates and static files to their respective branches and don't mix them together in one branch.
 
 If you don't want to modify a certain file but use the Jupyter-JSC default, delete it from the respective branch to take advantage of any updates such as bugfixes on Jupyter-JSC's side.
 
