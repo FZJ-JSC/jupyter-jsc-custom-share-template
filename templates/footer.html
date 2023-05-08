@@ -18,7 +18,7 @@
 <div id="ampel-{{system_lower}}" class="text-center">
   <img class="ampel-img" src='{{static_url( "images/footer/systems/" + system_lower + ".svg?v=" + random_int(10) )}}' />
   <a href="{{href}}" target="_blank" class="align-middle" data-toggle="ample-tooltip"
-    -title='{incident_messages.get(system, "")}'>
+    -title='{maintenance.get(system, "")}'>
     {%- if system == "JUPYTER" -%}
     Jupyter-JSC
     {%- elif system == "HDFCLOUD" -%}
