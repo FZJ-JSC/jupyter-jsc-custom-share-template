@@ -17,8 +17,7 @@
 {%- set system_lower = system.lower() %}
 <div id="ampel-{{system_lower}}" class="text-center">
   <img class="ampel-img" src='{{static_url( "images/footer/systems/" + system_lower + ".svg?v=" + random_int(10) )}}' />
-  <a href="{{href}}" target="_blank" class="align-middle" data-toggle="ample-tooltip"
-    -title='{maintenance.get(system, "")}'>
+  <a href="{{href}}" target="_blank" class="align-middle" data-toggle="ample-tooltip" title=''>
     {%- if system == "JUPYTER" -%}
     Jupyter-JSC
     {%- elif system == "HDFCLOUD" -%}
