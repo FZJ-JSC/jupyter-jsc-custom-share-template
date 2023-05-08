@@ -7,17 +7,17 @@ Reference templates and static files used by the Jupyter-JSC JupyterHub can be f
 
 ## Templates
 
-This branch contains any templates and static files that should be changed on the staging JupyterHub instance. Templates are written in [Jinja](https://jinja.palletsprojects.com/en/3.1.x/). For more information, refer to the [official JupyterHub documentation](https://jupyterhub.readthedocs.io/en/stable/reference/templates.html).
+This branch contains any templates and static files that should be changed on the production JupyterHub instance. Templates are written in [Jinja](https://jinja.palletsprojects.com/en/3.1.x/). For more information, refer to the [official JupyterHub documentation](https://jupyterhub.readthedocs.io/en/stable/reference/templates.html).
 
 ### Suggested changes for a custom JupyterHub
 
-* Change header and footer as desired. Any logos should be placed in the (production) `static` branch. 
+* Change header and footer as desired. Any logos should be placed in the `static/images` directory. 
 
 * You may want to update the meta data in `page.html`.
 
-* You may want to change the login text in `<div id="upper-login-div">` and carousel texts via the `carousel_item` Jinja macros in `login.html`.
+* You may want to change the login text in `<div id="upper-login-div">` and carousel texts of the `templates/login.html` file as well as the carousel backgrounds in `static/css/login.css`.
 
-* If you want to link to different or additional pages, update `links.html` (`link_list` Jinja macro) and `sidebar.html` (`ul` Jinja macro).
+* If you want to link to different or additional pages, update `links.html`.
 
 * The privacy policy may be updated in `dps.html`.
 
